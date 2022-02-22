@@ -1,6 +1,6 @@
 <template>
   <view>
-    首页
+    <search @search-click="searchClick"></search>
     <view class="bottom-line"></view>
   </view>
 </template>
@@ -9,7 +9,12 @@
 export default {
   data () {
     return {
-
+    }
+  },
+  methods: {
+    searchClick () {
+      console.log(1111)
+      uni.navigateTo({ url: '/packageA/search/search' })
     }
   }
 }
